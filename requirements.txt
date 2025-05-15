@@ -1,5 +1,5 @@
 imfusion-sdk
-torch --index-url https://download.pytorch.org/whl/cu118
+torch
 plotly
 PyYAML
 matplotlib
