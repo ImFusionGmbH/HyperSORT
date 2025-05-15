@@ -1,0 +1,6 @@
+DataPath	LabelPath
+path_to_perturbed_AMOS/images/0.nii.gz	path_to_perturbed_AMOS/labels/0.nii.gz
+path_to_perturbed_AMOS/images/1.nii.gz	path_to_perturbed_AMOS/labels/1.nii.gz
+path_to_perturbed_AMOS/images/2.nii.gz	path_to_perturbed_AMOS/labels/2.nii.gz
+path_to_perturbed_AMOS/images/3.nii.gz	path_to_perturbed_AMOS/labels/3.nii.gz
+path_to_perturbed_AMOS/images/4.nii.gz	path_to_perturbed_AMOS/labels/4.nii.gz

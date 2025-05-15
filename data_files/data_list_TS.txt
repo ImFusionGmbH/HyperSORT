@@ -1,0 +1,6 @@
+DataPath	LabelPath
+path_TS_dataset/images/0.nii.gz	path_TS_dataset/labels/0.nii.gz
+path_TS_dataset/images/1.nii.gz	path_TS_dataset/labels/1.nii.gz
+path_TS_dataset/images/2.nii.gz	path_TS_dataset/labels/2.nii.gz
+path_TS_dataset/images/3.nii.gz	path_TS_dataset/labels/3.nii.gz
+path_TS_dataset/images/4.nii.gz	path_TS_dataset/labels/4.nii.gz

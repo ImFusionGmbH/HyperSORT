@@ -1,0 +1,32 @@
+OutputPath: ./Results/AMOS_Experiment
+DataFile: ./data_files/data_list_AMOS.txt
+Pipeline: 
+  - MarkAsTarget:
+      apply_to: label
+  - SetLabelModality:
+      label_names: ["liver"]
+      apply_to: label
+  - MakeFloat:
+      apply_to: image
+  - BakeTransformation:
+      apply_to: [image, label]
+  - NormalizePercentile:
+      min_percentile: 0.005
+      max_percentile: 0.995
+      clamp_values: True
+      apply_to: image
+  - Resample: 
+      resolution: [2, 2, 2]
+      apply_to: [image, label]
+  - CenterROISampler:
+      roi_size: [168, 168, 168]
+ModelConfig:
+  HyperNetworkLayers: [2, 50, 50, 50]
+  UNet:
+    in_c: 1
+    out_c: 2
+    n_down: 3
+    n_fix: 3
+    C: 16
+    n_dim: 3
+

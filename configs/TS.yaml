@@ -1,0 +1,34 @@
+OutputPath: ./Results/TS_Experiment
+DataFile: ./data_files/data_list_TS.txt
+Pipeline: 
+  - MarkAsTarget:
+      apply_to: label
+  - SetLabelModality:
+      label_names: ["liver"]
+      apply_to: label
+  - MakeFloat:
+      apply_to: image
+  - BakeTransformation:
+      apply_to: [image, label]
+  - NormalizePercentile:
+      min_percentile: 0.005
+      max_percentile: 0.995
+      clamp_values: True
+      apply_to: image
+  - Resample: 
+      resolution: [2, 2, 2]
+      apply_to: [image, label]
+  - OrientedROISampler:
+      roi_size: [168, 168, 168]
+      roi_spacing: [1.5, 1.5, 1.5]
+      num_samples: 1
+      sample_from_labels_proportion: 1.0
+ModelConfig:
+  HyperNetworkLayers: [2, 50, 50, 50]
+  UNet:
+    in_c: 1
+    out_c: 2
+    n_down: 3
+    n_fix: 3
+    C: 16
+    n_dim: 3
