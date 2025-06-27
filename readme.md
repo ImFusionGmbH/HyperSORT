@@ -1,5 +1,5 @@
 # HyperSORT
-Code for the MICCAI 2025 submission "HyperSORT: Self-Organising Robust Training with hyper-networks"
+Code for the MICCAI 2025 article "[HyperSORT: Self-Organising Robust Training with hyper-networks](https://arxiv.org/abs/2506.21430)"
 
 # Overview
 
@@ -7,6 +7,10 @@ HyperSORT leverages hyper-networks to learn a meaningful latent space parameteri
 
 <!-- ![HyperSORT overview](images/Graphical_abstract.png "Overview of HyperSORT") -->
 <img src="images/Graphical_abstract.png" alt="Overview of HyperSORT" width="1000"/>
+
+## TotalSegmentator experiment
+
+The obtained latent space for the TS experiment can be [studied here](https://ImFusionGmbH.github.io/HyperSORT/TS_latent.html).
 
 # Guidelines
 
